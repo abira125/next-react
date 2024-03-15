@@ -7,13 +7,14 @@
 </head>
 <body>
     <div id="app"></div>
-    <script type="text/javascript">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!--Babel script-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
         const appDiv = document.getElementById('app')
-        const h1Element = document.createElement('h1')
-        const textNode = document.createTextNode('Develop. Preview. Ship')
-
-        h1Element.appendChild(textNode)
-        appDiv.appendChild(h1Element)
+        const root = ReactDOM.createRoot(appDiv)
+        root.render(<h1>Develop. Preview. Ship.</h1>)
     </script>
 </body>
 </html>
