@@ -13,8 +13,26 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
         const appDiv = document.getElementById('app')
+
+        function Header(){
+            return (
+                <h1>
+                    Develop. Preview. Ship.
+                </h1>
+            )
+        }
+
+        function HomePage(){
+            return (
+                <div>
+                    {/* Nesting the Header component */}
+                    <Header />
+                </div>
+            )
+        }
+
         const root = ReactDOM.createRoot(appDiv)
-        root.render(<h1>Develop. Preview. Ship.</h1>)
+        root.render(<HomePage />)
     </script>
 </body>
 </html>
